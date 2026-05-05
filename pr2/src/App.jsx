@@ -1,3 +1,18 @@
+import { useContext } from "react";
+import { UserContext } from "./context/UserContext";
+
+export default function App() {
+  const { user, setUser } = useContext(UserContext);
+  return (
+    <div style={{ textAlign: "center", marginTop: 100 }}>
+      <h1>Hello, {user}</h1>
+
+      <button onClick={() => setUser("Dipanshu")}>
+        Change User
+      </button>
+    </div>
+  );
+}
 import { useEffect, useState } from "react";
 
 function App() {
